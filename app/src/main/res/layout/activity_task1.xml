@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Настройте дзен, отметьте то\nчто вас интересует"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rect_round_20_grey">
+
+
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:autofillHints="no"
+            android:background="@drawable/rect_round_20_grey"
+            android:fontFamily="@font/montserrat_semibold"
+            android:hint="Найди вручную..."
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#858585"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_search_light"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainCategories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="-20dp"
+            android:background="@drawable/rect_round_20_grey"
+            android:paddingBottom="20dp"
+            android:tag="board"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.example.dzen_vk_cup_2022.task_1.views.SoapBubblesView
+                        android:id="@+id/soapBubblesView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="200dp" />
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/modeOfLifeList"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:background="@drawable/rect_round_10_grey"
+            android:tag="modeOfLifeList"
+            app:layout_constraintEnd_toStartOf="@+id/beautyAndHealth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/beautyAndHealth">
+
+            <ImageView
+                android:id="@+id/dom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingTop="13dp"
+                android:paddingBottom="30dp"
+                android:src="@drawable/ic_mode_of_life_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingBottom="7dp"
+                android:text="Быт"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/beautyAndHealth"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rect_round_10_grey"
+            android:tag="beautyAndHealth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingTop="7dp"
+                android:paddingBottom="34dp"
+                android:src="@drawable/ic_health_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Красота и здоровье"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/interests"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:background="@drawable/rect_round_10_grey"
+            android:tag="interests"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/beautyAndHealth"
+            app:layout_constraintTop_toTopOf="@+id/beautyAndHealth">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="25dp"
+                android:src="@drawable/ic_interests" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingBottom="7dp"
+                android:text="Интересы"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/kitchen"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+
+            android:background="@drawable/rect_round_10_grey"
+            android:tag="kitchen"
+            app:layout_constraintEnd_toStartOf="@+id/recreationAndEntertainment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recreationAndEntertainment">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="30dp"
+                android:src="@drawable/ic_meal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingBottom="7dp"
+                android:text="Кухня"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/recreationAndEntertainment"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rect_round_10_grey"
+            android:tag="recreationAndEntertainment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/beautyAndHealth">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="36dp"
+                android:src="@drawable/ic_yoga" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:lineHeight="15dp"
+                android:lines="2"
+                android:text="Отдых и\nразвлечения"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/family"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:background="@drawable/rect_round_10_grey"
+            android:tag="family"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recreationAndEntertainment"
+            app:layout_constraintTop_toTopOf="@+id/recreationAndEntertainment">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:paddingTop="14dp"
+                android:paddingBottom="28dp"
+                android:src="@drawable/ic_family" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingBottom="7dp"
+                android:text="Семья"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/answer_element"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:background="@drawable/dragging_answer_element_background"
+    android:fontFamily="@font/montserrat_semibold"
+    android:gravity="center"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:textColor="@color/turquoise"
+    android:textSize="15sp"
+    tools:text="Один" />

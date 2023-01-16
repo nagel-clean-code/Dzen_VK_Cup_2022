@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dzen_VK_Cup_2022</string>
+    <string name="multi_stage">Многоступенчатый</string>
+    <string name="prev_task">Прошлая задача</string>
+    <string name="matching">Сопоставление</string>
+    <string name="matching_element">Сопоставте элементы</string>
+    <string name="dragging_variant">Перетаскивание</string>
+    <string name="fill_in_gaps">Заполните пропуски</string>
+    <string name="completion">Заполнение</string>
+    <string name="estimation">Оценка</string>
+    <string name="rate_text">Оцените текст</string>
+</resources>

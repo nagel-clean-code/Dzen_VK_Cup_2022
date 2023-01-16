@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SoapBubblesView">
+        <attr name="colorButton" format="color"/>
+        <attr name="colorButtonSelected" format="color"/>
+    </declare-styleable>
+
+<!--    Атрибут стандартного стиля  -->
+    <attr name="soapBubblesFieldStyle" format="reference"/>
+
+</resources>

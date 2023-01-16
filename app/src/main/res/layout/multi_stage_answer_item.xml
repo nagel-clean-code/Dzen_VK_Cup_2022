@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/multi_stage_background_answer_item">
+
+    <TextView
+        android:id="@+id/text_answer_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/montserrat_semibold"
+        android:maxLength="20"
+        android:paddingStart="20dp"
+        android:textColor="@color/turquoise"
+        android:textSize="16sp"
+        tools:text="Первый самый первый" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:src="@drawable/ic_check_mark" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingStart="5dp"
+        android:textColor="@color/turquoise"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        tools:text="100%"
+        tools:visibility="visible" />
+</LinearLayout>
