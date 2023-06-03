@@ -7,7 +7,7 @@ import androidx.core.view.isVisible
 import com.example.dzen_vk_cup_2022.databinding.ScrollElementLayoutBinding
 
 /**
- * @param funJumpOnPageViewPager - в этой функции обязательно должен быть включен функционал отключения скролинга viewPager
+ * @param funJumpOnPageViewPager - в этой функции реализуется скролинг viewPager с параметром smoothScroll=true
  */
 class ScrollElementView(
     private val scrollElement: ScrollElementLayoutBinding,
